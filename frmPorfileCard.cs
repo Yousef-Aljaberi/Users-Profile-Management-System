@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace UsersPorfile_Management_System
 {
-    public partial class frmAddNewUserProfile : Form
+    public partial class frmPorfileCard : Form
     {
-        public frmAddNewUserProfile()
+        public frmPorfileCard()
         {
             InitializeComponent();
         }
-
-      
     }
 }

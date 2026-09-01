@@ -17,4 +17,13 @@ namespace UsersPorfile_Management_System
             InitializeComponent();
         }
     }
+    public class UserProfile
+    {
+        public int ID;
+        public string FullName;
+        public string Deparment;
+        public string PhoneNumber;
+        public Image image;
+      
+    }
 }
