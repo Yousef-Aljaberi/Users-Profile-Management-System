@@ -31,7 +31,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBrowsAndSelectPhoto = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picLoginPhoto = new System.Windows.Forms.PictureBox();
             this.btnCancle = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
@@ -43,8 +43,9 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaveAndAddToFile = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLoginPhoto)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.btnBrowsAndSelectPhoto);
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.picLoginPhoto);
             this.groupBox1.Location = new System.Drawing.Point(960, 51);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(609, 651);
@@ -70,14 +71,16 @@
             this.btnBrowsAndSelectPhoto.TabIndex = 1;
             this.btnBrowsAndSelectPhoto.Text = "تصفح واختيار صورة...";
             this.btnBrowsAndSelectPhoto.UseVisualStyleBackColor = false;
+            this.btnBrowsAndSelectPhoto.Click += new System.EventHandler(this.btnBrowsAndSelectPhoto_Click);
             // 
-            // pictureBox1
+            // picLoginPhoto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(59, 60);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(530, 422);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picLoginPhoto.Location = new System.Drawing.Point(59, 60);
+            this.picLoginPhoto.Name = "picLoginPhoto";
+            this.picLoginPhoto.Size = new System.Drawing.Size(530, 422);
+            this.picLoginPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLoginPhoto.TabIndex = 0;
+            this.picLoginPhoto.TabStop = false;
             // 
             // btnCancle
             // 
@@ -183,11 +186,18 @@
             this.btnSaveAndAddToFile.TabIndex = 4;
             this.btnSaveAndAddToFile.Text = "حفظ وإضافة الملف";
             this.btnSaveAndAddToFile.UseVisualStyleBackColor = false;
+            this.btnSaveAndAddToFile.Click += new System.EventHandler(this.btnSaveAndAddToFile_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // frmAddNewUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1581, 1005);
             this.Controls.Add(this.btnSaveAndAddToFile);
@@ -198,7 +208,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "frmAddNewUserProfile";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLoginPhoto)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -210,7 +220,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnBrowsAndSelectPhoto;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picLoginPhoto;
         private System.Windows.Forms.Button btnCancle;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtPhoneNumber;
@@ -222,5 +232,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSaveAndAddToFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

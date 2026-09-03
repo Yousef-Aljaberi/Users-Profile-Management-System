@@ -16,5 +16,26 @@ namespace UsersPorfile_Management_System
         {
             InitializeComponent();
         }
+        public frmPorfileCard(UserProfile userPfrofile)
+        {
+            InitializeComponent();
+            pictureBox1.Image = userPfrofile.image;
+            lblFullName.Text = userPfrofile.FullName;
+            lblID.Text = "الرقم التريفي: "+userPfrofile.ID;
+            lblDepartment.Text = "القسم-التخصص: " + userPfrofile.Deparment;
+            lblPhoneNumber.Text = "رقم الهاتف: " + userPfrofile.PhoneNumber;
+
+        }
+
+        private void btnCloseCard_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmPorfileCard_Load(object sender, EventArgs e)
+        {
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+
+        }
     }
 }

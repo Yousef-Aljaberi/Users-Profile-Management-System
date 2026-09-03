@@ -108,11 +108,13 @@
             this.btnCloseCard.TabIndex = 6;
             this.btnCloseCard.Text = "إغلاق البطاقة";
             this.btnCloseCard.UseVisualStyleBackColor = false;
+            this.btnCloseCard.Click += new System.EventHandler(this.btnCloseCard_Click);
             // 
             // frmPorfileCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1172, 1091);
             this.Controls.Add(this.btnCloseCard);
             this.Controls.Add(this.label5);
@@ -124,6 +126,7 @@
             this.Name = "frmPorfileCard";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "frmPorfileCard";
+            this.Load += new System.EventHandler(this.frmPorfileCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
