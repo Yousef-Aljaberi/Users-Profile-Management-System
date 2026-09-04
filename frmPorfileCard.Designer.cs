@@ -68,10 +68,11 @@
             // 
             // lblDepartment
             // 
+            this.lblDepartment.AutoSize = true;
             this.lblDepartment.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblDepartment.Location = new System.Drawing.Point(349, 837);
+            this.lblDepartment.Location = new System.Drawing.Point(483, 820);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(357, 51);
+            this.lblDepartment.Size = new System.Drawing.Size(85, 33);
             this.lblDepartment.TabIndex = 3;
             this.lblDepartment.Text = "label3";
             this.lblDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -79,7 +80,7 @@
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(349, 915);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(349, 895);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(357, 51);
             this.lblPhoneNumber.TabIndex = 4;
@@ -129,6 +130,7 @@
             this.Load += new System.EventHandler(this.frmPorfileCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
